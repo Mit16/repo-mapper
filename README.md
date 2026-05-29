@@ -2,8 +2,7 @@
 
 > Turn any GitHub repo into a structured Obsidian note — automatically.
 
-Paste a GitHub URL. Get a fully formatted Obsidian note with signal scoring,
-monetizable angles, and wikilinks — written directly into your vault.
+Paste a GitHub URL. Get a fully formatted Obsidian note with signal scoring, monetizable angles, and wikilinks — written directly into your vault.
 
 ---
 
@@ -19,9 +18,9 @@ monetizable angles, and wikilinks — written directly into your vault.
 
 ## What It Does
 
-1. Fetches repo metadata + README from GitHub API
-2. Sends it to Gemini with a builder-focused prompt
-3. Writes a structured `.md` note directly into your Obsidian vault
+1. Fetches repo metadata + README from GitHub API  
+2. Sends it to Gemini with a builder-focused prompt  
+3. Writes a structured `.md` note directly into your Obsidian vault  
 
 No manual copy-pasting. No raw README dumps. Actual intelligence extraction.
 
@@ -29,13 +28,13 @@ No manual copy-pasting. No raw README dumps. Actual intelligence extraction.
 
 ## Quick Start
 
-\`\`\`bash
+```bash
 git clone https://github.com/highoncodes/repo-mapper
 cd repo-mapper
 npm install
 cp .env.example .env   # fill in your keys
 node index.js https://github.com/langchain-ai/langchain
-\`\`\`
+```
 
 Your vault gets a new note at `Resources/Repos/langchain.md` instantly.
 
@@ -56,11 +55,11 @@ Each note includes:
 
 ## Configuration
 
-\`\`\`env
+```env
 GEMINI_API_KEY=       # aistudio.google.com — free
 GITHUB_TOKEN=         # optional, raises rate limit to 5000/hr
 OBSIDIAN_VAULT_PATH=  # absolute path to your vault folder
-\`\`\`
+```
 
 ---
 
@@ -68,10 +67,10 @@ OBSIDIAN_VAULT_PATH=  # absolute path to your vault folder
 
 Process multiple repos at once:
 
-\`\`\`bash
+```bash
 # Put URLs in urls.txt, one per line
 node batch.js
-\`\`\`
+```
 
 ---
 
